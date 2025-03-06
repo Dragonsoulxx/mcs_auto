@@ -1,0 +1,435 @@
+/* Stile generale per il tema dark */
+body {
+    background-color: #1a2634;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Altezza approssimativa del footer per evitare sovrapposizioni */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container principale con margine per la navbar fissa */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1 0 auto; /* Permette al contenitore di espandersi per spingere il footer in basso */
+}
+
+/* Stile per il logo e il titolo */
+.text-center img {
+    max-width: 200px;
+    height: auto;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+/* Bottoni */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+/* Sezioni di scambio */
+.exchange-section {
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #2a3e54;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    background-color: #3a4f63;
+    border: 1px solid #4a6a8a;
+    color: #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-control:focus {
+    background-color: #4a6a8a;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    color: #e0e0e0;
+}
+
+/* Stile per il caricamento */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a3e54;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.loading-overlay .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #4CAF50;
+    border-radius: 50%;
+    border-top: 3px solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Stile per il popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a3e54;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    z-index: 1001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.popup-overlay .message {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.popup-overlay button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-overlay button:hover {
+    background-color: #45a049;
+}
+
+/* Stile per l'overlay dello sfondo */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* Stile per la dashboard */
+.alert {
+    background-color: #2a3e54;
+    border: 1px solid #4a6a8a;
+    color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.alert-info {
+    background-color: #3a4f63;
+}
+
+/* Stile personalizzato per le tabs */
+.nav-tabs {
+    background-color: #2a3e54;
+    border-bottom: 1px solid #4a6a8a;
+}
+
+.nav-tabs .nav-link {
+    color: #e0e0e0;
+    background-color: #2a3e54;
+    border: 1px solid #4a6a8a;
+    border-bottom: none;
+    border-radius: 0;
+    margin-right: 2px;
+    padding: 10px 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #1a2634;
+    border-color: #4CAF50;
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ffffff;
+    background-color: #3a4f63;
+}
+
+.tab-content .card {
+    margin-top: 0; /* Rimuove margine aggiuntivo per uniformità */
+}
+
+/* Stile personalizzato per la navbar */
+.navbar {
+    background-color: #2a3e54;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #ffffff;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 5px;
+    }
+
+    .navbar-nav .nav-link.btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Stile per i pulsanti social */
+.btn-outline-light {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+}
+
+.btn-outline-light:hover {
+    background-color: #e0e0e0;
+    color: #1a2634;
+    border-color: #e0e0e0;
+}
+
+/* Stile per il footer sticky */
+footer {
+    background-color: #2a3e54;
+    border-top: 1px solid #4a6a8a;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Stile per il testo del footer */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    body {
+        padding-bottom: 50px; /* Riduci l'altezza del padding su mobile */
+    }
+}
+
+/* Stile per gli alert */
+.alert-dismissible .btn-close {
+    background-color: #e0e0e0;
+    opacity: 1;
+}
+
+.alert-dismissible .btn-close:hover {
+    opacity: 0.8;
+}
+
+/* Stile per il form di registrazione */
+.registration-form {
+    background-color: #2a3e54;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4a6a8a;
+    border-radius: 8px;
+    background-color: #3a4f63;
+    color: #e0e0e0;
+}
+
+.form-group input:focus {
+    background-color: #4a6a8a;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+.link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #45a049;
+}
