@@ -1,3 +1,0 @@
-MANUAL TEST
-TEST FROM PHP: ipprova.eu 7777
-TEST FROM PHP: ipprova.eu 7777
