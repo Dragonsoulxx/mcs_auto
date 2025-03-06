@@ -4,13 +4,13 @@ header('Content-Type: text/html; charset=UTF-8');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'multics_exchanger');
 define('DB_USER', 'multics_user');
-define('DB_PASS', 'peppe');
+define('DB_PASS', 'insert db password');
 
 // Configurazione server
 define('SERVER_IP', '80.211.129.193');
-define('SERVER_PORT_CACHE', 55555);
-define('SERVER_PORT_MGCAMD', 48710);
-define('BASE_PORT_NEWCAMD', 9600);
+define('SERVER_PORT_CACHE', 55555); /------ change port
+define('SERVER_PORT_MGCAMD', 48710); /------ change port
+define('BASE_PORT_NEWCAMD', 9600); /------ change port
 
 // Timeout per la connessione
 if (!defined('CONNECTION_TIMEOUT')) {
@@ -18,10 +18,10 @@ if (!defined('CONNECTION_TIMEOUT')) {
 }
 
 // Percorsi dei file
-define('CACHE_FILE', '/var/www/multics_exchanger/cache.cfg');
-define('MGCAMD_FILE', '/var/www/multics_exchanger/mgcamd.cfg');
-define('NEWCAMD_FILE', '/var/www/multics_exchanger/newcamd.cfg');
-define('PROFILES_FILE', '/var/www/multics_exchanger/profili.cfg');
+define('CACHE_FILE', '/var/www/multics_exchanger/cache.cfg'); /---------change directory
+define('MGCAMD_FILE', '/var/www/multics_exchanger/mgcamd.cfg');  /---------change directory
+define('NEWCAMD_FILE', '/var/www/multics_exchanger/newcamd.cfg');  /---------change directory
+define('PROFILES_FILE', '/var/www/multics_exchanger/profili.cfg');  /---------change directory
 
 // Nome dell'applicazione
 define('APP_NAME', 'Multics Exchanger');
